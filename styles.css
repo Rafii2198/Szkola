@@ -11,7 +11,6 @@ body{
   transform: scale(1);
   transform-origin: top;
   position: relative;
-  z-index: -9999;
 }
 
 #title{
@@ -68,7 +67,7 @@ body{
   font-size: 18px;
   padding: 8px;
   border-right: 2px dotted #575757;
-  /*transition: background-color .19s ease-in-out; */
+  transition: background-color .19s ease-in-out;
   opacity: 0.85;
   text-align: center;
 
@@ -83,11 +82,24 @@ body{
   margin-top: 10px;
 }
 
-.lekcja{
+.lekcjaPi{
   float: left;
   width: 514px;
   padding: 20px;
   background-color: #eeeeee;
   min-height: 620px;
-  margin: 0px 5px;
+  margin: 0px 10px;
+  text-align: justify;
+}
+
+.lekcjaPo{
+  float: left;
+  width: 1088px;
+  padding: 20px;
+  background-color: #eeeeee;
+  min-height: 620px;
+  margin: 15px 10px;
+  column-count: 2;
+  column-gap: 40px;
+  text-align: justify;
 }
