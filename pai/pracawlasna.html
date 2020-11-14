@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Praca Własna</title>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family: 'Comfortaa', cursive;
+                background-color: #2b2b2b;
+                
+            }
+
+            #main{
+                margin-left: 4%;
+                padding: 10px;
+                text-align: center;
+            }
+            
+            input{
+                padding: 0px;
+                width: 100% !important;
+            }
+            h1{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            h2{
+                margin-top: 10px;
+            }
+            .fiszka{
+                display: block;
+                padding: 8px;
+                background-color: #c5c5c5;
+                width: 550px;
+                min-height: 400px;
+                float: left; 
+                margin: 5px;
+                box-shadow: 5px 6px 2px black;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="znak_wartosc" class="fiszka">
+                <h1>Zadanie 1</h1>
+                <h2>Suma ASCII</h2>
+                Podaj ciąg zanków:<input type="text" id="znaki_ascii" onchange="zadanie1()">
+                <p>Suma wartoci kodów ASCII:</p>
+                <p id="ascii_wynik"></p>
+                <p>Jest to znak:</p>
+                <p id=znak_ascii></p>
+
+                <div style="clear: both;"></div>
+            </div>
+            <div id="znak_parzyste" class="fiszka">
+                <h1>Zadanie 2</h1>
+                <h2>Znaki Parzyste:</h2>
+                <label>Podaj ciąg zanków:<input type="text" id="znaki_wszystkie" onchange="zadanie2()"></label>
+                <p>Ciąg znaków parzystych:</p>
+                <p id="znaki_parzyste"></p>
+
+                <div style="clear: both;"></div>
+            </div>
+            <div id="koszt" class="fiszka">
+                <h1>Zadanie 3</h1>
+                <h2>Koszt podróży</h2>
+                <label>Podaj długość podróży w Kilometrach:<input type="number" step="0.1" id="podany_koszt" onchange="zadanie3()"></label>
+                <p>Koszt podróży wynosi:</p>
+                <p id="koszt_obliczony"></p>
+
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+     <script>
+         //Elementy
+         var ascii_wynik = document.getElementById("ascii_wynik");
+         var znak_ascii = document.getElementById("znak_ascii")
+         var znaki_parzyste = document.getElementById("znaki_parzyste");
+         var koszt_obliczony = document.getElementById("koszt_obliczony");
+
+         //Zadanie 1
+         function zadanie1(){
+             let znaki_ascii = document.getElementById("znaki_ascii");
+             let tabela = znaki_ascii.value;
+             let temp_suma = 0;
+             for (let i = 0; i < tabela.length; i++){
+                temp_suma += znaki_ascii.value.charCodeAt(i);
+             }
+             ascii_wynik.innerHTML = temp_suma;
+             znak_ascii.innerHTML = String.fromCharCode(temp_suma);
+         }
+
+         //Zadnie 2
+         function zadanie2(){
+            let znaki_wszystkie = document.getElementById("znaki_wszystkie");
+            let tabela = znaki_wszystkie.value;
+            let temp_string = "";
+
+            for (let i = 0; i < tabela.length; i++){
+                if (i % 2 == 0){
+                    temp_string += tabela[i];
+                }
+                znaki_parzyste.innerHTML = temp_string;
+            }
+         }
+
+         //Zadanie 3
+         function zadanie3(){
+            let input_koszt = document.getElementById("podany_koszt");
+            let podany_koszt = parseFloat(input_koszt.value);
+            let koszt_liczony = 0.0;
+            let temp_koszt = 0.0;
+            if (podany_koszt > 0){
+                temp_koszt += 5;
+                koszt_liczony = podany_koszt - 1;
+            }
+
+            while (koszt_liczony > 0){
+                temp_koszt += 1.5;
+                koszt_liczony -= 0.5;
+            }
+            koszt_obliczony.innerHTML = temp_koszt + " PLN";
+         }
+     </script>
+    </body>
+</html>
