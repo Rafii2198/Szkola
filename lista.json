@@ -1,5 +1,3 @@
 {
-	"pai": [
-		{ "title": "Praca Własna", "location": "/pai/pracawlasna.html" }
-	]
+	"pai": [{ "title": "Praca Własna", "location": "pai/pracawlasna.html" }]
 }
