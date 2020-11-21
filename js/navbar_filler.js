@@ -1,4 +1,4 @@
-fetch('/lista.json')
+fetch('/Szkola/lista.json')
 	.then((response) => response.text())
 	.then((data) => {
 		filling(JSON.parse(data));
