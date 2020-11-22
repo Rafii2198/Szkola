@@ -24,7 +24,7 @@ function filling(lista) {
 		let title = document.createTextNode(element['title']);
 		entry.className = 'dropdown-item';
 		entry.href = element['location'];
-		nav_pai.appendChild(entry);
+		nav_wiai.appendChild(entry);
 		entry.appendChild(title);
 	});
 }
