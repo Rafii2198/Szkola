@@ -1,6 +1,11 @@
 nav {
   background-color: #2b2b2b;
   border-bottom: 3px solid #d3d3d3;
+  font-family: Comfortaa;
+  background-color: #2b2b2b;
+  color: #2b2b2b;
+  font-weight: normal;
+  letter-spacing: 1px;
 }
 
 body {
