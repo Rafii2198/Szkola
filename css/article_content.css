@@ -6,6 +6,9 @@
   #wiai_flash::after {
     content: 'Praca domowa z wykożystaniem elementów <embed>, <audio> oraz <video>.';
   }
+  #pai_borderradius::after {
+    content: 'Praca domowa w której należało zmodyfikowac kwadrat w koło.';
+  }
 }
 
 @media (min-width: 769px) {
@@ -13,6 +16,9 @@
     content: 'Proste trzy zadania. Pierwsze wymagło użycia funkci .charCodeAt(). Drugie to proste obliczanie czy dany indeks tablicy jest parzysty. Trzecie to już bardzo proste dodawanie.';
   }
   #wiai_flash::after {
-    content: 'Praca domowa z wykożystaniem elementów <embed type="application/x-schockwave-flash>, <audio> oraz <video>. Praca plikami Flashowymi czyli .swf.';
+    content: 'Praca domowa z wykożystaniem elementów <embed type="application/x-schockwave-flash>, <audio> oraz <video>. Praca z plikami Flashowymi czyli .swf.';
+  }
+  #pai_borderradius::after {
+    content: 'Praca domowa w której należało zmodyfikowac kwadrat w koło za pomocą stylu border-radius. W moim wykonaniu można zmienić więcej.';
   }
 }
