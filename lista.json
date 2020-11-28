@@ -1,4 +1,7 @@
 {
-	"pai": [{ "title": "Praca Własna", "location": "/pai/pracawlasna.html" }],
+	"pai": [
+		{ "title": "Praca Własna", "location": "/pai/pracawlasna.html" },
+		{ "title": "Border-radius", "location": "/pai/borderradius.html" }
+	],
 	"wiai": [{ "title": "Flash", "location": "/wiai/flash.html" }]
 }
