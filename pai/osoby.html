@@ -27,7 +27,7 @@
 		/>
 		<style>
 			input[type='text'] {
-				width: 100%;
+				width: 70%;
 			}
 		</style>
 	</head>
@@ -103,14 +103,14 @@
 							<p id="dodaj_info"></p>
 							<div style="clear: both"></div>
 						</div>
-						<div id="usun_button" style="margin-top: 20px">
-							<button style="float: left">Usuń</button>&nbsp
+						<div style="margin-top: 20px">
+							<button id="usun_button" style="float: left">Usuń</button>&nbsp
 							<input type="text" id="usun_text" />
 							<p id="usun_info"></p>
 							<div style="clear: both"></div>
 						</div>
-						<div id="losuj_button" style="margin-top: 20px">
-							<button style="float: left">Losuj</button>&nbsp
+						<div style="margin-top: 20px">
+							<button id="losuj_button" style="float: left">Losuj</button>&nbsp
 							<input type="text" id="losuj_text" readonly />
 							<div style="clear: both"></div>
 						</div>
@@ -138,7 +138,7 @@
 			let lista = ['Jan', 'Zbyszek', 'Magda'];
 
 			function showpage() {
-				lista_display.innerText = '';
+				lista_display.innerHTML = '';
 				lista.forEach((text) => {
 					let li = document.createElement('li');
 					let imie = document.createTextNode(text);
@@ -200,6 +200,7 @@
 				console.clear();
 				console.log(liczba);
 			};
+
 			showpage();
 		</script>
 
