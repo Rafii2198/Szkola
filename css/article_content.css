@@ -1,5 +1,8 @@
 @charset "UTF-8";
 @media (max-width: 768px) {
+  #pai_osoby::after {
+    content: 'Dodawanie, usuwanie, losowanie wartości z listy';
+  }
   #pai_pracawlasna::after {
     content: 'Proste trzy zadania z urzyciem pracy na obiekcie String oraz liczeniu z użciem opercji IF.';
   }
@@ -12,6 +15,9 @@
 }
 
 @media (min-width: 769px) {
+  #pai_osoby::after {
+    content: 'Dodawanie, usuwanie, losowanie wartości z listy z użyciem eventów, funkcji asynchronicznych oraz filtrowania listy';
+  }
   #pai_pracawlasna::after {
     content: 'Proste trzy zadania. Pierwsze wymagło użycia funkci .charCodeAt(). Drugie to proste obliczanie czy dany indeks tablicy jest parzysty. Trzecie to już bardzo proste dodawanie.';
   }
