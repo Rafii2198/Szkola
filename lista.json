@@ -1,7 +1,8 @@
 {
 	"pai": [
 		{ "title": "Praca Własna", "location": "/pai/pracawlasna.html" },
-		{ "title": "Border-radius", "location": "/pai/borderradius.html" }
+		{ "title": "Border-radius", "location": "/pai/borderradius.html" },
+		{ "title": "Losowa Osoba", "location": "/pai/osoby.html" }
 	],
 	"wiai": [{ "title": "Flash", "location": "/wiai/flash.html" }]
 }

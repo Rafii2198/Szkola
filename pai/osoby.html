@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>Szkoła</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="https://i.imgur.com/Dfsf9Q6.jpg"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="/css/styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Open+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			input[type='text'] {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-dark navbar-expand-md">
+			<a href="/" class="navbar-brand">Rafał Skurski</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#mainmenu"
+				aria-controls="mainmenu"
+				aria-expanded="false"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div id="mainmenu" class="collapse navbar-collapse">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="/"> Start </a>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							data-toggle="dropdown"
+							role="button"
+							aria-expanded="false"
+						>
+							WiAI
+						</a>
+						<div class="dropdown-menu" id="wiai_lista"></div>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href=""
+							target="page"
+							data-toggle="dropdown"
+							role="button"
+							aria-expanded="false"
+						>
+							PAI
+						</a>
+						<div class="dropdown-menu" id="pai_lista"></div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/Rafii2198/Szkola">
+							Zobacz Źródło
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row mt-3">
+				<div class="col-sm-12 col-md-6">
+					<div class="karta">
+						<h2 class="tytul_wpisu">Lista osób:</h2>
+						<ol id="lista_display">
+							<li>vv</li>
+							<li>aa</li>
+						</ol>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-5">
+					<div class="karta">
+						<h2 class="tytul_wpisu">Operacje na liście:</h2>
+						<div style="margin-top: 20px">
+							<button id="dodaj_button" style="float: left">Dodaj</button>&nbsp
+							<input type="text" id="dodaj_text" />
+							<p id="dodaj_info"></p>
+							<div style="clear: both"></div>
+						</div>
+						<div id="usun_button" style="margin-top: 20px">
+							<button style="float: left">Usuń</button>&nbsp
+							<input type="text" id="usun_text" />
+							<p id="usun_info"></p>
+							<div style="clear: both"></div>
+						</div>
+						<div id="losuj_button" style="margin-top: 20px">
+							<button style="float: left">Losuj</button>&nbsp
+							<input type="text" id="losuj_text" readonly />
+							<div style="clear: both"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			//funkcja  getRndInteger  pochodzi ze strony W3schools.com
+			function getRndInteger(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+			let dodaj_button = document.getElementById('dodaj_button');
+			let dodaj_text = document.getElementById('dodaj_text');
+			let dodaj_info = document.getElementById('dodaj_info');
+			let usun_button = document.getElementById('usun_button');
+			let usun_text = document.getElementById('usun_text');
+			let usun_info = document.getElementById('usun_info');
+			let losuj_button = document.getElementById('losuj_button');
+			let losuj_text = document.getElementById('losuj_text');
+			let lista_display = document.getElementById('lista_display');
+
+			let lista = ['Jan', 'Zbyszek', 'Magda'];
+
+			function showpage() {
+				lista_display.innerText = '';
+				lista.forEach((text) => {
+					let li = document.createElement('li');
+					let imie = document.createTextNode(text);
+					lista_display.appendChild(li);
+					li.append(imie);
+				});
+			}
+
+			function adding() {
+				let exist = lista.includes(dodaj_text.value);
+				if (exist === true) {
+					dodaj_info.innerText = '\u2717 To imie już istnieje w liście';
+				} else {
+					dodaj_info.innerText = `\u2713 Dodano imie: ${dodaj_text.value}`;
+					lista.push(dodaj_text.value);
+				}
+			}
+
+			function remove() {
+				let exist = lista.includes(usun_text.value);
+				if (exist === false) {
+					usun_info.innerText = '\u2717 Tego imienia nie ma w liście';
+				} else {
+					usun_info.innerText = `\u2713 Usunięto imie: ${usun_text.value}`;
+					const index = lista.indexOf(usun_text.value);
+					lista.splice(index, 1);
+				}
+			}
+
+			function los() {}
+
+			dodaj_button.onclick = async function () {
+				await adding();
+				await function () {
+					lista = lista.filter((element) => {
+						return element != null;
+					});
+					console.log(lista);
+				};
+				await lista.sort();
+				await showpage();
+			};
+
+			usun_button.onclick = async function () {
+				await remove();
+				await function () {
+					lista = lista.filter((element) => {
+						return element != null;
+					});
+					console.log(lista);
+				};
+				await lista.sort();
+				await showpage();
+			};
+
+			losuj_button.onclick = () => {
+				let liczba = getRndInteger(0, lista.length);
+				losuj_text.value = lista[liczba];
+				console.clear();
+				console.log(liczba);
+			};
+			showpage();
+		</script>
+
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+			crossorigin="anonymous"
+		></script>
+		<script src="/js/navbar_filler.js"></script>
+	</body>
+</html>

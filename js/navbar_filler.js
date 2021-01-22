@@ -9,7 +9,7 @@ function filling(lista) {
 	let nav_wiai = document.getElementById('wiai_lista');
 	let lista_pai = lista['pai'];
 	let lista_wiai = lista['wiai'];
-	lista_pai.forEach((element) => {
+	lista_pai.reverse().forEach((element) => {
 		console.log(element);
 		let entry = document.createElement('a');
 		let title = document.createTextNode(element['title']);
@@ -18,7 +18,7 @@ function filling(lista) {
 		nav_pai.appendChild(entry);
 		entry.appendChild(title);
 	});
-	lista_wiai.forEach((element) => {
+	lista_wiai.reverse().forEach((element) => {
 		console.log(element);
 		let entry = document.createElement('a');
 		let title = document.createTextNode(element['title']);
