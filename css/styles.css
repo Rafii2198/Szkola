@@ -1,4 +1,4 @@
-nav {
+#mynavbar {
   background-color: #2b2b2b;
   border-bottom: 3px solid #d3d3d3;
   font-family: Comfortaa;
@@ -22,7 +22,7 @@ body {
   -webkit-box-shadow: 4px 4px 3px black;
           box-shadow: 4px 4px 3px black;
   border-radius: 10px;
-  height: 400px;
+  min-height: 400px;
   -ms-flex-line-pack: center;
       align-content: center;
 }
