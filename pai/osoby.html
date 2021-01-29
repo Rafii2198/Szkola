@@ -168,8 +168,6 @@
 				}
 			}
 
-			function los() {}
-
 			dodaj_button.onclick = async function () {
 				await adding();
 				await function () {
@@ -194,12 +192,13 @@
 				await showpage();
 			};
 
-			losuj_button.onclick = () => {
-				let liczba = getRndInteger(0, lista.length);
-				losuj_text.value = lista[liczba];
+			function los(list){
+				let liczba = getRndInteger(0, list.length);
 				console.clear();
 				console.log(liczba);
-			};
+				return list[liczba];
+			}
+			losuj_button.onclick = function(){losuj_text.value = los(lista)};
 
 			showpage();
 		</script>
