@@ -1,4 +1,4 @@
-#mynavbar {
+nav {
   background-color: #2b2b2b;
   border-bottom: 3px solid #d3d3d3;
   font-family: Comfortaa;
@@ -14,30 +14,25 @@ body {
 }
 
 .karta {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   color: #2b2b2b;
   padding: 12px;
   padding-top: 12px;
   background-color: #d3d3d3;
-  -webkit-box-shadow: 4px 4px 3px black;
-          box-shadow: 4px 4px 3px black;
+  box-shadow: 4px 4px 3px black;
   border-radius: 10px;
   min-height: 400px;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
 }
-
 .karta .tytul_wpisu {
   text-align: center;
   border-bottom: 1px solid #2b2b2b;
 }
-
 .karta .subtytul_wpisu {
   text-align: center;
   font-size: 150%;
   margin-top: -6px;
 }
-
 .karta div.tekst_wpisu {
   width: 100%;
   padding: 0 16px;
@@ -49,21 +44,15 @@ body {
     text-align: left;
   }
 }
-
 article {
-  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.24, 0.06, 0.4, 0.97);
-  transition: -webkit-transform 0.25s cubic-bezier(0.24, 0.06, 0.4, 0.97);
   transition: transform 0.25s cubic-bezier(0.24, 0.06, 0.4, 0.97);
-  transition: transform 0.25s cubic-bezier(0.24, 0.06, 0.4, 0.97), -webkit-transform 0.25s cubic-bezier(0.24, 0.06, 0.4, 0.97);
 }
-
 article a:hover {
   text-decoration: none;
 }
 
 article:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .topper {
@@ -80,16 +69,13 @@ article:hover {
   font-size: 24px;
   letter-spacing: 1px;
 }
-
 #lista_zadan a,
 #lista_zadan a:hover {
   color: #d3d3d3;
   padding: 8px;
   border-bottom: 3px solid #d3d3d32f;
-  -webkit-transition: border-bottom 0.18s cubic-bezier(0.24, 0.06, 0.4, 0.97);
   transition: border-bottom 0.18s cubic-bezier(0.24, 0.06, 0.4, 0.97);
 }
-
 #lista_zadan a:hover {
   text-decoration: none;
   color: #d3d3d3;

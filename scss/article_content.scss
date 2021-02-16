@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+	#pai_object::after {
+		content: 'Tworzenie i korzystanie z obiektu z własnymi metodami.';
+	}
+	#pai_osoby::after {
+		content: 'Dodawanie, usuwanie, losowanie wartości z listy.';
+	}
+	#pai_pracawlasna::after {
+		content: 'Proste trzy zadania z urzyciem pracy na obiekcie String oraz liczeniu z użciem opercji IF.';
+	}
+	#wiai_flash::after {
+		content: 'Praca domowa z wykożystaniem elementów <embed>, <audio> oraz <video>.';
+	}
+	#pai_borderradius::after {
+		content: 'Praca domowa w której należało zmodyfikowac kwadrat w koło.';
+	}
+}
+@media (min-width: 769px) {
+	#pai_object::after {
+		content: 'Tworzenie obiektu za pomocą class, dodawanie metod oraz iterowanie między wszystkimi wartościami danego obiektu.';
+	}
+	#pai_osoby::after {
+		content: 'Dodawanie, usuwanie, losowanie wartości z listy z użyciem eventów, funkcji asynchronicznych oraz filtrowania listy';
+	}
+	#pai_pracawlasna::after {
+		content: 'Proste trzy zadania. Pierwsze wymagło użycia funkci charCodeAt(). Drugie to proste obliczanie czy dany indeks tablicy jest parzysty. Trzecie to już bardzo proste dodawanie.';
+	}
+	#wiai_flash::after {
+		content: 'Praca domowa z wykożystaniem elementów <embed type="application/x-schockwave-flash>, <audio> oraz <video>. Praca z plikami Flashowymi czyli .swf.';
+	}
+	#pai_borderradius::after {
+		content: 'Praca domowa w której należało zmodyfikowac kwadrat w koło za pomocą stylu border-radius. W moim wykonaniu można zmienić więcej.';
+	}
+}
