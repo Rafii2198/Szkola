@@ -1,9 +1,0 @@
-{
-	"pai": [
-		{ "title": "Praca Własna", "location": "/pai/pracawlasna.html" },
-		{ "title": "Border-radius", "location": "/pai/borderradius.html" },
-		{ "title": "Losowa Osoba", "location": "/pai/osoby.html" },
-		{ "title": "Budynek", "location": "/pai/object.html"}
-	],
-	"wiai": [{ "title": "Flash", "location": "/wiai/flash.html" }]
-}
