@@ -1,0 +1,18 @@
+$colors: (
+  mono: (
+    200: #e5e5e5,
+    400: #a9a9a9,
+    600: #161616,
+  ),
+  primary: (
+    400: #030211,
+  ),
+);
+
+@each $color, $shade in $colors {
+  @each $prop, $value in $shade {
+    :root {
+      --clr-#{$color}-#{$prop}: #{$value};
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@use '../abstracts' as *;
+@use 'sass:map';
+header {
+  background: var(--clr-primary-400);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  font-family: var(--font-primary);
+  color: var(--clr-mono-200);
+  margin: 0;
+  padding: 0;
+
+  img {
+    display: none;
+  }
+
+  input[type='checkbox'] {
+    display: none;
+    &:checked ~ nav {
+      transform-origin: top;
+      transform: scale(1, 1);
+      transition: transform 200ms ease-in-out;
+      a {
+        opacity: 1;
+        transition: opacity 100ms ease-in-out 160ms;
+      }
+    }
+  }
+  label[for='nav-toggle'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0.75em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    span,
+    span::after,
+    span::before {
+      display: block;
+      background: var(--clr-mono-200);
+      height: 2px;
+      width: 1.5em;
+      border-radius: 0.125em;
+      position: relative;
+    }
+    span::after,
+    span::before {
+      content: '';
+      position: absolute;
+    }
+
+    span::before {
+      bottom: 6px;
+    }
+    span::after {
+      top: 6px;
+    }
+
+    @include mq(medium) {
+      display: none;
+    }
+  }
+
+  h1 {
+    @include mq(medium) {
+      grid-column: 2 / span 1;
+    }
+  }
+
+  @include mq(medium) {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(38em, 1fr) 1fr;
+    gap: 1em;
+    img {
+      height: 5em;
+      display: block;
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+}

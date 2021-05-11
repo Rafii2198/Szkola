@@ -1,0 +1,25 @@
+{
+  "name": "szkola",
+  "version": "1.0.0",
+  "description": "Repozytorium używane głównie do przechowywania szkolnych materiałów (np. prace domowe) ~ Rafał Skurski",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html -p 5500",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rafii2198/Szkola.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rafii2198/Szkola/issues"
+  },
+  "homepage": "https://github.com/Rafii2198/Szkola#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.12"
+  }
+}
